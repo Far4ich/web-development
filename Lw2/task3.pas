@@ -1,16 +1,17 @@
-PROGRAM SarahRevere(INPUT, OUTPUT);
+PROGRAM PrintHello(INPUT, OUTPUT);
 USES
   DOS;
+VAR
+  QueryStr: STRING;
+  PosName: INTEGER;
 BEGIN {Response}
   WRITELN('Content-Type: text/plain');
   WRITELN;
-  IF GETENV('QUERY_STRING') = 'lanterns=1'
+  QueryStr := GETENV('QUERY_STRING');
+  PosName := POS('name=', QueryStr);
+  IF PosName <> 0
   THEN
-    WRITELN('Sea')
+    WRITELN('Hello dear, ', COPY(QueryStr, 6, LENGTH(QueryStr), '!')
   ELSE
-    IF GETENV('QUERY_STRING') = 'lanterns=2'
-    THEN
-      WRITELN('Land')
-    ELSE
-      WRITELN('Nothing')
+    WRITELN('Hello Anonymous!')
 END. {Response}
