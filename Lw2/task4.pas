@@ -29,7 +29,14 @@ END;
 BEGIN {Response}
   WRITELN('Content-Type: text/plain');
   WRITELN;
+<<<<<<< HEAD
   WRITELN('First Name: ', GetQueryStringParameter('first_name'));
   WRITELN('Last Name: ', GetQueryStringParameter('last_name'));
   WRITELN('Age: ', GetQueryStringParameter('age'))
+=======
+  QueryStr := GETENV('QUERY_STRING');
+  WRITELN('First Name: ', GetQueryStringParameter('first_name'));
+  WRITELN('Last Name: ', GetQueryStringParameter('last_name'));
+  WRITELN('Age ', GetQueryStringParameter('age'))
+>>>>>>> 86491c8b46e15abe09cd864b38f482d54df9fbd1
 END. {Response}
