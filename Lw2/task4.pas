@@ -18,5 +18,7 @@ BEGIN {Response}
   WRITELN('Content-Type: text/plain');
   WRITELN;
   QueryStr := GETENV('QUERY_STRING');
-
+  WRITELN('First Name: ', GetQueryStringParameter('first_name'));
+  WRITELN('Last Name: ', GetQueryStringParameter('last_name'));
+  WRITELN('Age ', GetQueryStringParameter('age'))
 END. {Response}
