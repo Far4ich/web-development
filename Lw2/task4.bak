@@ -1,0 +1,31 @@
+PROGRAM SarahRevere(INPUT, OUTPUT);
+USES
+  DOS;
+VAR
+  QueryStr: STRING;
+
+FUNCTION GetQueryStringParameter(Key: STRING): STRING;
+VAR
+  KeyLength, PosKey, Pos&: INTEGER;
+BEGIN
+  DeltaPos := 0;
+  Pos& := 0;
+  KeyLength := LENGTH(Key);
+  QueryStr := GETENV('QUERY_STRING');
+  PosKey := POS(Key, QueryStr);      
+  DEL(QueryStr, 1, PosKey + KeyLength + 1);
+  Pos& := POS('&', QueryStr)
+  IF Pos& <> 0
+  THEN
+    GetQueryStringParameter := Copy(QueryStr, 1, Pos& - 1)
+  ELSE
+    GetQueryStringParameter := Copy(QueryStr)
+END;
+
+BEGIN {Response}
+  WRITELN('Content-Type: text/plain');
+  WRITELN;
+  WRITELN('First Name: ', GetQueryStringParameter('first_name'));
+  WRITELN('Last Name: ', GetQueryStringParameter('last_name'));
+  WRITELN('Age: ', GetQueryStringParameter('age'))
+END. {Response}
