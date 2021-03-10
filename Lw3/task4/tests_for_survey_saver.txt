@@ -1,0 +1,7 @@
+email=kirill@yandex.ru
+
+email=kirill@yandex.ru&first_name=andrey
+email=kirill@yandex.ru&last_name=denisov
+email=kirill@yandex.ru&age=3
+
+email=kirill@yandex.ru&first_name=andrey&last_name=denisov&age=0.4
