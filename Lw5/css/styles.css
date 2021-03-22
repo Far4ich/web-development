@@ -1,16 +1,36 @@
-@font-face {
-    font-family: 'Open Sans';
-    src: url(fonts/OpenSans-LightItalic.ttf);
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.photo-border {
+.main {
+    margin: 100px auto;
+    width: 1000px;
+}
+
+.main-top {
+    margin-bottom: 40px;
+}
+
+.main-top-image {
+    display: inline-block;
+}
+
+.main-top-image__photo {
     width: 330px;
     height: 350px;
     border-radius: 5px;
     background-color: #132d36;
+    object-fit: cover;
 }
 
-.quote-text {
+.main-top-quote {
+    float: right;
+    margin: 120px 49px 0px 60px;
+    display: inline-block;
+}
+
+.main-top-quote__text {
     width: 500px;
     font-size: 28px;
     line-height: 42px;
@@ -19,7 +39,9 @@
     font-family: "Georgia";
 }
 
-.quote-autor {
+.main-top-quote__autor {
+    margin-top: 1px;
+    margin-left: 2px;
     font-size: 16px;
     line-height: 42px;
     color: #333333;
@@ -27,7 +49,11 @@
     font-family: "Open Sans", sans-serif;
 }
 
-.head-list {
+.main-bottom-list {
+    display: inline-block;
+}
+
+.main-bottom-list__head {
     font-size: 24px;
     line-height: 32px;
     color: #15a98c;
@@ -35,7 +61,10 @@
     font-family: "Open Sans", sans-serif;
 }
 
-.list-elements {
+.main-bottom-list__elements {
+    margin-bottom: 42px;
+    margin-left: 22px;
+    margin-top: 13px;
     width: 330px;
     font-size: 19px;
     line-height: 36px;
@@ -43,30 +72,42 @@
     font-family: "Georgia";
 }
 
-.name {
+.main-bottom-article {
+    float: right;
+    width: 605px;
+    display: inline-block;
+}
+
+.main-bottom-article__name {
     font-weight: 700;
     font-size: 48px;
     line-height: 42px;
     color: #333333;
     font-family: "Open Sans", sans-serif;
-    ;
 }
 
-.rectangle {
+.main-bottom-article__rectangle {
+    margin-top: 32px;
+    margin-left: -5px;
+    margin-bottom: 44px;
     width: 60px;
     height: 6px;
     border-radius: 3px;
     background-color: #45c3aa;
 }
 
-.text {
+.main-bottom-article__text {
+    margin-left: -5px;
     font-size: 19px;
     line-height: 32px;
     color: #555555;
     font-family: "Georgia";
 }
 
-.hobby {
+.main-bottom-article__hobby {
+    margin-top: 42px;
+    margin-left: -5px;
+    margin-bottom: 15px;
     font-weight: 400;
     font-size: 36px;
     line-height: 42px;
@@ -74,7 +115,16 @@
     font-family: "Open Sans", sans-serif;
 }
 
-.write-me {
+.main-bottom-article-write-me {
+    margin-top: 41px;
+    margin-left: -3px;
+    line-height: 32px;
+    color: #098d72;
+    width: 562px;
+    font-family: "Georgia";
+}
+
+.main-bottom-article-write-me__link {
     font-size: 19px;
     line-height: 32px;
     color: #098d72;
