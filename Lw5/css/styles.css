@@ -26,11 +26,22 @@
 
 .main-top-quote {
     float: right;
-    margin: 120px 49px 0px 60px;
+    margin: 51px 111px 0px 47px;
     display: inline-block;
 }
 
+.main-top-quote-quotes {
+    margin-left: -63px;
+}
+
+.main-top-quote-quotes__img {
+    width: 130px;
+    height: 87px;
+}
+
 .main-top-quote__text {
+    margin-right: -61px;
+    margin-top: -23px;
     width: 500px;
     font-size: 28px;
     line-height: 42px;
