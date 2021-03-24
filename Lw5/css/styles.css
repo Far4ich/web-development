@@ -60,6 +60,10 @@
     font-family: "Open Sans", sans-serif;
 }
 
+.main-bottom__clear {
+    clear: both;
+}
+
 .main-bottom-list {
     display: inline-block;
 }
