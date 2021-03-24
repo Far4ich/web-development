@@ -60,8 +60,14 @@
     font-family: "Open Sans", sans-serif;
 }
 
-.main-bottom__clear {
+.main-bottom {
+    margin: 0;
+}
+
+.main-bottom::after {
+    content: '';
     clear: both;
+    display: block;
 }
 
 .main-bottom-list {
@@ -90,7 +96,6 @@
 .main-bottom-article {
     float: right;
     width: 605px;
-    display: inline-block;
 }
 
 .main-bottom-article__name {
