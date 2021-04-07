@@ -1,0 +1,516 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body-background {
+    background-image: url("background.png");
+    background-position-y: 50px;
+    background-attachment: inherit;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.head-menu {
+    margin: 0px auto;
+    height: 50px;
+    max-width: 1000px;
+    font-size: 19px;
+    line-height: 32px;
+    color: #333333;
+    font-family: "Georgia";
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.head-menu__text {
+    margin: 10px;
+}
+
+.head-menu__about-me {
+    height: 50px;
+    max-width: 140px;
+}
+
+.head-menu__about-me:hover {
+    background-color: #15a98c;
+    color: #f5f5f5;
+}
+
+.head-menu__my-hobby {
+    max-width: 160px;
+    height: 50px;
+}
+
+.head-menu__my-hobby:hover {
+    background-color: #15a98c;
+    color: #f5f5f5;
+}
+
+.head-menu__favorite-films {
+    height: 50px;
+    max-width: 230px;
+}
+
+.head-menu__favorite-films:hover {
+    background-color: #15a98c;
+    color: #f5f5f5;
+}
+
+.main {
+    margin: 210px auto 55px;
+    width: 71%;
+    max-width: 1000px;
+}
+
+.main::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.main-left {
+    float: left;
+    width: 352px;
+}
+
+.main-right {
+    margin-top: 68px;
+    max-width: 610px;
+    float: right;
+}
+
+.main-left-image__photo {
+    width: 330px;
+    height: 350px;
+    border-radius: 5px;
+    background-color: #132d36;
+    object-fit: cover;
+}
+
+.main-left-list {
+    margin-top: 40px;
+}
+
+.main-left-list__head {
+    font-size: 24px;
+    line-height: 32px;
+    color: #15a98c;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+}
+
+.main-left-list__elements {
+    margin-bottom: 42px;
+    margin-left: 22px;
+    margin-top: 13px;
+    width: 330px;
+    font-size: 19px;
+    line-height: 36px;
+    color: #555555;
+    font-family: "Georgia";
+}
+
+.main-right-quote {
+    margin-top: -43px;
+    margin-left: -2px;
+    margin-bottom: ‒1px;
+}
+
+.main-right-quote__text {
+    margin-right: -61px;
+    margin-top: -23px;
+    max-width: 500px;
+    font-size: 28px;
+    line-height: 42px;
+    color: #ffffff;
+    font-style: italic;
+    font-family: "Georgia";
+}
+
+.main-right-quote__autor {
+    margin-top: 1px;
+    margin-left: 2px;
+    font-size: 16px;
+    line-height: 42px;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+}
+
+.main-right-article {
+    margin-top: 83px;
+    max-width: 605px;
+}
+
+.main-right-article__name {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 42px;
+    color: #333333;
+    font-family: "Open Sans", sans-serif;
+}
+
+.main-right-article__rectangle {
+    margin-top: 32px;
+    margin-left: -6px;
+    margin-bottom: 44px;
+    width: 60px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #45c3aa;
+}
+
+.main-right-article__text {
+    margin-left: -5px;
+    font-size: 19px;
+    line-height: 32px;
+    color: #555555;
+    font-family: "Georgia";
+}
+
+.main-right-article__hobby {
+    margin-top: 42px;
+    margin-left: -5px;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    color: #333333;
+    font-family: "Open Sans", sans-serif;
+}
+
+.main-right-article-write-me {
+    margin-top: 41px;
+    margin-left: -5px;
+    line-height: 32px;
+    color: #098d72;
+    max-width: 562px;
+    font-family: "Georgia";
+}
+
+.main-right-article-write-me__link {
+    font-size: 19px;
+    line-height: 32px;
+    color: #098d72;
+    max-width: 562px;
+    font-family: "Georgia";
+}
+
+.favorite-films-background {
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+.favorite-films {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding-top: 36px;
+    padding-right: 40px;
+    padding-bottom: 59px;
+    font-size: 16px;
+    line-height: 28px;
+    color: #555555;
+    font-family: "Georgia";
+}
+
+.favorite-films-header {
+    font-size: 36px;
+    line-height: 42px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+}
+
+.favorite-films-list {
+    margin-bottom: 54px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.favorite-films-list-element {
+    margin-top: 33px;
+    width: 285px;
+}
+
+.favorite-films-list-header {
+    margin-top: 14px;
+    margin-left: -2px;
+    margin-bottom: 17px;
+    font-size: 22px;
+    line-height: 32px;
+    color: #333333;
+    font-weight: 700;
+    font-family: "Open Sans";
+}
+
+.favorite-films__all-films {
+    display: block;
+    margin: 0px auto;
+    font-size: 19px;
+    line-height: 32px;
+    color: #f5f5f5;
+    font-family: "Georgia";
+    border-width: 0px;
+    width: 220px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #15a98c;
+}
+
+.favorite-films__all-films:hover {
+    display: block;
+    margin: 0px auto;
+    font-size: 19px;
+    line-height: 32px;
+    color: #f5f5f5;
+    font-family: "Georgia";
+    border-width: 0px;
+    width: 220px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #098d71;
+}
+
+.write-me {
+    max-width: 698px;
+    margin: 0px auto;
+    margin-top: 68px;
+}
+
+.red-star {
+    color: #ee0707;
+}
+
+.wrtite-me-header__text {
+    margin: -24px auto 0px;
+    max-width: 298px;
+    background-color: white;
+    font-size: 36px;
+    line-height: 42px;
+    color: #333333;
+    font-weight: 300;
+    font-family: "Open Sans";
+}
+
+.write-me-form {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    line-height: 32px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Open Sans";
+}
+
+.write-me-form__label {
+    display: block;
+    margin-left: 11px;
+}
+
+.write-me-form-gender-radios {
+    margin: 4px 0 0 4px;
+    font-size: 18px;
+    line-height: 32px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Open Sans";
+}
+
+.write-me-form__label_gender {
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.write-me-form__label_country {
+    display: block;
+    margin-left: 13px;
+}
+
+.write-me-form__text {
+    margin-left: 12px;
+    width: 535px;
+    height: 45px;
+    margin-top: 3px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 2px solid #c9c9c9;
+    outline: none;
+}
+
+.write-me-form-massage {
+    margin: 36px auto 0px;
+}
+
+.write-me-form-massage__header {
+    margin: 0px 0px 3px 11px;
+}
+
+.write-me-form__textarea {
+    outline: none;
+    resize: none;
+    width: 535px;
+    margin-left: 12px;
+    height: 145px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 2px solid #c9c9c9;
+}
+
+.write-me-form__text:hover {
+    border-radius: 3px;
+    background-color: #c9c9c9;
+    border: 2px solid #a6a6a6;
+}
+
+.write-me-form__text:focus,
+.write-me-form__textarea:focus {
+    border: 2px solid #15a98c;
+}
+
+.write-me-form-name {
+    margin: 68px auto 0px;
+}
+
+.write-me-form-email {
+    margin: 25px auto 0px;
+}
+
+.write-me-form-country {
+    margin: 25px auto 0px;
+}
+
+.write-me-form-gender {
+    width: 529px;
+    margin: 41px auto 0px;
+}
+
+.write-me-form__hover {
+    outline: none;
+    cursor: pointer;
+    width: 545px;
+    height: 50px;
+    margin-left: 14px;
+    margin-top: 5px;
+    padding: 0 0 3px 12px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 2px solid #a6a6a6;
+    font-size: 18px;
+    line-height: 32px;
+    color: #555555;
+    font-weight: 400;
+    font-family: "Open Sans";
+}
+
+.write-me-form-send {
+    display: block;
+    margin: 42px auto 0;
+    font-size: 19px;
+    line-height: 32px;
+    color: #f5f5f5;
+    font-family: "Georgia";
+    border-width: 0px;
+    width: 220px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #15a98c;
+}
+
+.write-me-form-send:hover {
+    display: block;
+    font-size: 19px;
+    line-height: 32px;
+    color: #f5f5f5;
+    font-family: "Georgia";
+    border-width: 0px;
+    width: 220px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #098d71;
+}
+
+.footer-background {
+    background-color: #f9f9f9;
+    margin-top: 50px;
+    padding-top: 17px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.footer {
+    max-width: 720px;
+    margin: 0px auto;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 32px;
+    color: #555555;
+    font-family: "Georgia";
+}
+
+@media screen and (min-width: 480px) {
+    .main-right,
+    .main-left {
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }
+    .main-right-quote__text {
+        margin-top: 68px;
+        color: #848484;
+    }
+    .main-right-quote__autor {
+        color: #333333;
+    }
+    .favorite-films-header {
+        margin: 0px auto;
+        width: 350px;
+    }
+    .write-me-form__text,
+    .write-me-form-gender,
+    .write-me-form__hover,
+    .write-me-form__textarea {
+        width: 400px;
+    }
+    .head-menu {
+        margin: 0px auto;
+        max-width: 455px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .write-me-form__text,
+    .write-me-form-gender,
+    .write-me-form__hover,
+    .write-me-form__textarea {
+        width: 545px;
+    }
+}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1366px) {
+    .main-right {
+        float: right;
+        margin: 0;
+    }
+    .main-left {
+        float: left;
+        margin: 0;
+    }
+    .main-right-quote__text,
+    .main-right-quote__autor {
+        color: #ffffff;
+    }
+    .favorite-films-header {
+        margin: 0px;
+        width: auto;
+    }
+    .head-menu {
+        margin: 0px auto;
+        max-width: 1000px;
+    }
+}
