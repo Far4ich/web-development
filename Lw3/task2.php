@@ -12,7 +12,7 @@ for ($i = 0; $i < strlen($checkString); $i++)
 {
     if($i == 0)
     {
-        if(!preg_match("/[a-zа-я]/i", $checkString))
+        if(ctype_digit($checkString[$i]))
         {
             die("no, first symbol must be letter");
         }
@@ -23,4 +23,4 @@ for ($i = 0; $i < strlen($checkString); $i++)
     }
 }
 
-echo "yes";
+echo "Yes";

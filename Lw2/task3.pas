@@ -1,6 +1,5 @@
 PROGRAM PrintHello(INPUT, OUTPUT);
-USES
-  DOS;
+USES DOS;
 VAR
   QueryStr: STRING;
   PosName: INTEGER;
@@ -9,7 +8,7 @@ BEGIN {Response}
   WRITELN;
   QueryStr := GETENV('QUERY_STRING');
   PosName := POS('name=', QueryStr);
-  IF (PosName <> 0) AND (LENGTH(QueryStr) > 6)
+  IF (PosName <> 0) AND (LENGTH(QueryStr) > 5)
   THEN
     WRITELN('Hello dear, ', COPY(QueryStr, 6, LENGTH(QueryStr)), '!')
   ELSE
