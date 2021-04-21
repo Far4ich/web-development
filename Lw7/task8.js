@@ -3,11 +3,12 @@ let secondNumber
 let errorFlag
 let operations = ['*', '/', '+', '-']
 
-calc('*(- 5 6) 7');
-calc('+ + 6 5');
-calc(' 5 6');
-calc(' 6');
-calc('+ 6');
+calc('*(- 5 6) 7')
+calc('- 5 6')
+calc('+ + 6 5')
+calc(' 5 6')
+calc(' 6')
+calc('+ 6')
 calc('asdasdasdasd')
 calc('')
 
@@ -39,7 +40,7 @@ function calc(x) {
     if (errorFlag) {
         console.log('Wrong example')
     } else {
-        console.log(firstNumber);
+        console.log(firstNumber)
     }
 }
 

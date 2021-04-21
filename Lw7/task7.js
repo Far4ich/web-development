@@ -3,7 +3,8 @@ let isPrime
 isPrimeNumber(3)
 isPrimeNumber(4)
 isPrimeNumber([3, 4, 5])
-isPrimeNumber('DONAT')
+isPrimeNumber('DaT')
+isPrimeNumber([3, 'a', 5])
 
 function isPrimeNumber(x) {
     if (typeof x == 'object') {
@@ -15,10 +16,14 @@ function isPrimeNumber(x) {
                     break
                 }
             }
-            if (isPrime) {
-                console.log(x[i] + ' is prime number')
+            if (typeof x[i] == 'number') {
+                if (isPrime) {
+                    console.log(x[i] + ' is prime number')
+                } else {
+                    console.log(x[i] + ' is not prime number')
+                }
             } else {
-                console.log(x[i] + ' is not prime number')
+                console.log(x[i] + ' error data');
             }
         }
     } else if (typeof x == 'number') {
@@ -35,6 +40,6 @@ function isPrimeNumber(x) {
             console.log(x + ' is not prime number')
         }
     } else {
-        console.log('Error data');
+        console.log(x + ' error data')
     }
 }
