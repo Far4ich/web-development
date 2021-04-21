@@ -3,11 +3,11 @@ let isPrime
 isPrimeNumber(3)
 isPrimeNumber(4)
 isPrimeNumber([3, 4, 5])
-isPrimeNumber('ya')
+isPrimeNumber('DONAT')
 
 function isPrimeNumber(x) {
     if (typeof x == 'object') {
-        for (let i = 0; i <= x.length - 1; i++) {
+        for (let i = 0; i < x.length; i++) {
             isPrime = true
             for (let j = 2; j < x[i]; j++) {
                 if (x[i] % j == 0) {
