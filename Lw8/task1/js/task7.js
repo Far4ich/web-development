@@ -1,45 +1,58 @@
-let isPrime
+let isPrime;
 
-isPrimeNumber(3)
-isPrimeNumber(4)
-isPrimeNumber([3, 4, 5])
-isPrimeNumber('DaT')
-isPrimeNumber([3, 'a', 5])
+tests();
 
-function isPrimeNumber(x) {
-    if (typeof x == 'object') {
-        for (let i = 0; i < x.length; i++) {
-            isPrime = true
-            for (let j = 2; j < x[i]; j++) {
-                if (x[i] % j == 0) {
-                    isPrime = false
-                    break
-                }
-            }
-            if (typeof x[i] == 'number') {
-                if (isPrime) {
-                    console.log(x[i] + ' is prime number')
-                } else {
-                    console.log(x[i] + ' is not prime number')
-                }
-            } else {
-                console.log(x[i] + ' error data');
-            }
+function tests() {
+    isPrimeNumber([0, 1]);
+    isPrimeNumber(3);
+    isPrimeNumber(4);
+    isPrimeNumber([3, 4, 5]);
+    isPrimeNumber('DaT');
+    isPrimeNumber([3, 'a', 5]);
+}
+
+function isPrimeNumber(value) {
+
+    if (typeof value == 'object') {
+
+        for (let i = 0; i < value.length; i++) {
+            primeCheck(value[i]);
         }
-    } else if (typeof x == 'number') {
-        isPrime = true
-        for (let j = 2; j < x; j++) {
-            if (x % j == 0) {
-                isPrime = false
-                break
-            }
-        }
-        if (isPrime) {
-            console.log(x + ' is prime number')
-        } else {
-            console.log(x + ' is not prime number')
-        }
-    } else {
-        console.log(x + ' error data')
+
+    } else if (typeof value == 'number') {
+        primeCheck(value);
     }
+    else {
+        console.log(value + ' error data');
+    }
+
+}
+
+function primeCheck(number) {
+    isPrime = true;
+
+    if (number < 2) {
+        isPrime = false;
+    }
+
+    for (let j = 2; j < number; j++) {
+
+        if (number % j == 0) {
+            isPrime = false;
+            break;
+        }
+
+    }
+    if (typeof number == 'number') {
+
+        if (isPrime) {
+            console.log(number + ' is prime number');
+        } else {
+            console.log(number + ' is not prime number');
+        }
+
+    } else {
+        console.log(number + ' error data');
+    }
+
 }
