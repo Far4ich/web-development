@@ -1,3 +1,5 @@
+CREATE DATABASE Lw11;
+USE Lw11;
 CREATE TABLE facult
 (
 	facult_id INT AUTO_INCREMENT NOT NULL,
@@ -5,7 +7,7 @@ CREATE TABLE facult
     PRIMARY KEY (facult_id)
 )
 	DEFAULT CHARACTER SET utf8mb4
-    COLLATE 'utf8mb4_unicode_c1'
+    COLLATE 'utf8mb4_unicode_ci'
 	ENGINE InnoDB
 ;
 CREATE TABLE `group`
@@ -16,7 +18,7 @@ CREATE TABLE `group`
     PRIMARY KEY (group_id)
 )
 	DEFAULT CHARACTER SET utf8mb4
-    COLLATE 'utf8mb4_unicode_c1'
+    COLLATE 'utf8mb4_unicode_ci'
 	ENGINE InnoDB
 ;
 
@@ -30,7 +32,7 @@ CREATE TABLE student
     PRIMARY KEY (student_id)
 )
 	DEFAULT CHARACTER SET utf8mb4
-    COLLATE 'utf8mb4_unicode_c1'
+    COLLATE 'utf8mb4_unicode_ci'
 	ENGINE InnoDB
 ;
 
@@ -98,7 +100,8 @@ INSERT INTO student SET `name` = 'e', age = 49, group_id = 9, facult_id = 3;
 
 SELECT 
 	student_id AS "id", 
-    name
+    name,
+    age
 FROM 
 	student
 WHERE 
@@ -108,26 +111,18 @@ SELECT
 	student.name AS "StudentName",
     `group`.name AS "GroupName"
 FROM
-	`group` JOIN student ON `group`.group_id=student.group_id;	 
-    
-SELECT books.title AS "Title", borrowings.returndate AS "Return Date"
-FROM borrowings JOIN books ON borrowings.bookid=books.bookid
-WHERE books.author='Dan Brown';
+	`group` JOIN student ON `group`.group_id=1;	
+
+SELECT 
+	student.name AS "StudentName", 
+    facult.name AS "FacultName"
+FROM 
+	facult JOIN student ON facult.facult_id=1;
 
 SELECT
 	student.name AS "StudentName", 
     facult.name AS "FacultName",
-    `group`.name AS "GroupName",
+    `group`.name AS "GroupName"
 FROM
-	group
-	JOIN facult ON facult.facult_id=student.facult_id
-	JOIN student ON `group`.group_id=student.group_id
-
-SELECT 
-	student.name AS "StudentName", 
-    facult.name AS "FacultName",
-FROM 
-	facult JOIN student ON facult.facult_id=student.facult_id
-
-
-
+	student JOIN facult ON facult.facult_id=student.facult_id AND student.student_id=1
+	JOIN `group` ON `group`.group_id=student.group_id
