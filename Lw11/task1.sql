@@ -111,18 +111,29 @@ SELECT
 	student.name AS "StudentName",
     `group`.name AS "GroupName"
 FROM
-	`group` JOIN student ON `group`.group_id=1;	
+	`group` 
+JOIN 
+	student ON `group`.group_id=student.group_id	
+WHERE
+	`group`.group_id = 1;
 
 SELECT 
 	student.name AS "StudentName", 
     facult.name AS "FacultName"
 FROM 
-	facult JOIN student ON facult.facult_id=1;
+	facult 
+JOIN 
+	student ON facult.facult_id=student.facult_id
+WHERE
+	facult.facult_id=1;
 
 SELECT
 	student.name AS "StudentName", 
     facult.name AS "FacultName",
     `group`.name AS "GroupName"
 FROM
-	student JOIN facult ON facult.facult_id=student.facult_id AND student.student_id=1
-	JOIN `group` ON `group`.group_id=student.group_id
+	student 
+JOIN 
+	facult ON facult.facult_id=student.facult_id AND student.student_id=1
+JOIN 
+	`group` ON `group`.group_id=student.group_id
